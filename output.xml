@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220714 22:01:11.946" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes" source="c:\CursoRobotUdemy\RobotFrameworkUdemyMay\Webtesting\amazon_testes.robot">
+<test id="s1-t1" name="Acessar a home page do site Amazon.com.br" line="5">
+<kw name="Abrir a homepage da Amazon" library="amazon_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220714 22:01:12.160" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220714 22:01:12.160" endtime="20220714 22:01:13.242"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LINK_HOME}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220714 22:01:13.242" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20220714 22:01:13.242" endtime="20220714 22:01:14.853"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="nav-logo-sprites"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220714 22:01:14.854" endtime="20220714 22:01:14.892"/>
+</kw>
+<status status="PASS" starttime="20220714 22:01:12.159" endtime="20220714 22:01:14.892"/>
+</kw>
+<status status="PASS" starttime="20220714 22:01:12.159" endtime="20220714 22:01:14.892"/>
+</test>
+<test id="s1-t2" name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" line="8">
+<kw name="Encontrar o campo de pesquisa" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="twotabsearchtextbox"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220714 22:01:14.894" level="INFO">Clicking element 'xpath=//*[@id="twotabsearchtextbox"]'.</msg>
+<status status="PASS" starttime="20220714 22:01:14.894" endtime="20220714 22:01:14.975"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="twotabsearchtextbox"]</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220714 22:01:14.975" level="INFO">Typing text 'Xbox Series S' into text field 'xpath=//*[@id="twotabsearchtextbox"]'.</msg>
+<status status="PASS" starttime="20220714 22:01:14.975" endtime="20220714 22:01:15.058"/>
+</kw>
+<status status="PASS" starttime="20220714 22:01:14.894" endtime="20220714 22:01:15.059"/>
+</kw>
+<status status="PASS" starttime="20220714 22:01:14.893" endtime="20220714 22:01:15.059"/>
+</test>
+<test id="s1-t3" name="Clicar no botão de pesquisa" line="13">
+<kw name="Encontrar o botão de pesquisar" library="amazon_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="nav-search-submit-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220714 22:01:15.061" level="INFO">Clicking button 'xpath=//*[@id="nav-search-submit-button"]'.</msg>
+<status status="PASS" starttime="20220714 22:01:15.061" endtime="20220714 22:01:16.538"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[3]/div/div/div/div/div[2]/div[1]/h2/a/span</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220714 22:01:16.538" endtime="20220714 22:01:16.558"/>
+</kw>
+<status status="PASS" starttime="20220714 22:01:15.061" endtime="20220714 22:01:16.558"/>
+</kw>
+<status status="PASS" starttime="20220714 22:01:15.060" endtime="20220714 22:01:16.559"/>
+</test>
+<status status="PASS" starttime="20220714 22:01:11.948" endtime="20220714 22:01:16.560"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
